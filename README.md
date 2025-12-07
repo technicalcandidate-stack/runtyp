@@ -8,8 +8,6 @@
 
 Lightning-fast, zero-dependency runtime type validation for TS/JS. 25x faster than zod with a cleaner API.
 
-Sponsored by [Aeroview](https://aeroview.io)
-
 **🚀 Fast & reliable performance**  
 
 - 25x faster than `zod` and `yup`, 4.3x faster than `joi` (see [Performance](#performance) section)
@@ -40,7 +38,6 @@ Sponsored by [Aeroview](https://aeroview.io)
 - [Type Definitions](#type-definitions)
 - [Advanced Usage](#advanced-usage)
 - [Contribution](#contribution)
-- [Sponsorship](#sponsorship)
  
 # Performance
 
@@ -668,14 +665,5 @@ type Input = Infer<typeof validator>; // string
 - Write about `runtyp` in your blog, tweet about it, or share it with your friends!
 
 # Sponsorship
-<br>
-<picture>
-    <source srcset="docs/aeroview-white.svg" media="(prefers-color-scheme: dark)">
-    <source srcset="docs/aeroview-black.svg" media="(prefers-color-scheme: light)">
-    <img src="docs/aeroview-black.svg">
-</picture>
-<br>
 
-Aeroview is a lightning-fast, developer-friendly, AI-powered logging IDE. Get started for free at [https://aeroview.io](https://aeroview.io).
-
-Want to sponsor this project? [Reach out](mailto:mhweiner234@gmail.com?subject=I%20want%20to%20sponsor%20forma).
+Want to sponsor this project? [Reach out](mailto:marc@aeroview.io?subject=I%20want%20to%20sponsor%20runtyp).
