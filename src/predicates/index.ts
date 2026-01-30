@@ -16,3 +16,4 @@ export * from './union';
 export * from './literal';
 export * from './date';
 export * from './any';
+export * from './record';
