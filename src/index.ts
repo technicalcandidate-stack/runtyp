@@ -1,6 +1,6 @@
-export type Prettify<T> = {
-    [K in keyof T]: T[K];
-} & {};
+export type Prettify<T> = any extends T
+    ? T // preserve any/unknown
+    : { [K in keyof T]: T[K] } & {};
 export type ValidationResult<T> = {
     isValid: true
     value: T
