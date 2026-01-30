@@ -13,16 +13,13 @@
     "typescript",
     "javascript"
   ],
-  "sponsor": {
-    "url": "https://aeroview.io"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aeroview/runtyp.git"
+    "url": "git+https://github.com/logspacehq/runtyp.git"
   },
-  "homepage": "https://github.com/aeroview/runtyp",
+  "homepage": "https://github.com/logspacehq/runtyp",
   "license": "MIT",
-  "author": "Marc H. Weiner <marc@aeroview.io> (https://aeroview.io)",
+  "author": "Marc H. Weiner <mhweiner234@gmail.com>",
   "publishConfig": {
     "access": "public"
   },
@@ -34,7 +31,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "test": "c8 kizu 'src/**/*.spec.ts' && c8 report -r text -r html",
+    "test": "c8 kizu -f 'src/**/*.spec.ts' && c8 report -r text -r html",
     "benchmark": "npm run build && node benchmark.js",
     "lint": "eslint ./ --ext .js,.ts",
     "build": "tsc"
