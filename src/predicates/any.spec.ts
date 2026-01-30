@@ -1,5 +1,36 @@
 import {test} from 'kizu';
 import {any} from './any';
+import {object, string} from '.';
+import type {Infer} from '..';
+
+// Type-level test: Infer<any()> should be `any`, not `{ [x: string]: any }`
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const anyValidator = any();
+
+type AnyType = Infer<typeof anyValidator>;
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-underscore-dangle
+const anyTest1: AnyType = 'string'; // should work - any accepts string
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-underscore-dangle
+const anyTest2: AnyType = 42; // should work - any accepts number
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-underscore-dangle
+const anyTest3: AnyType = {foo: 'bar'}; // should work - any accepts object
+
+// Type-level test: any() in object schema should allow any value
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const schema = object({
+    name: string(),
+    metadata: any(),
+});
+
+type Schema = Infer<typeof schema>;
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-underscore-dangle
+const schemaTest1: Schema = {name: 'test', metadata: 'anything'};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-underscore-dangle
+const schemaTest2: Schema = {name: 'test', metadata: 123};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-underscore-dangle
+const schemaTest3: Schema = {name: 'test', metadata: {nested: 'object'}};
 
 test('any(): accepts any value', (assert) => {
 
