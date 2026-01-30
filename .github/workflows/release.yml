@@ -8,6 +8,7 @@ on:
 permissions:
       contents: write
       packages: write
+      id-token: write  # Required for npm provenance
 jobs:
   release:
     name: release
@@ -38,3 +39,4 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_PROVENANCE: true
