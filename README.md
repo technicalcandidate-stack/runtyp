@@ -59,6 +59,13 @@ runtyp is designed for speed. Here's how it compares to other popular programmat
 npm i runtyp
 ```
 
+## Requirements
+
+- **Node.js**: 18+ (or any modern browser)
+- **TypeScript**: 5.0+ (for type inference features)
+
+> **Note**: JavaScript users can use runtyp without TypeScript. The TypeScript requirement only applies if you want type inference via `Infer<>`.
+
 # Usage
 
 ## Example
