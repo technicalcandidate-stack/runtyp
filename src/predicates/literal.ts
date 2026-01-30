@@ -1,6 +1,6 @@
 import {Pred, ValidationResult} from '..';
 
-export function literal<T extends any>(expected: T): Pred<T> {
+export function literal<const T>(expected: T): Pred<T> {
 
     return (value: unknown): ValidationResult<T> => {
 
